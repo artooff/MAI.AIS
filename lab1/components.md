@@ -17,27 +17,26 @@ Person(user, "Пользователь")
 
 System_Ext(web_site, "Клиентский веб-сайт", "HTML, CSS, JavaScript, React", "Веб-интерфейс")
 
-System_Boundary(conference_site, "Сайт блогов") {
-   'Container(web_site, "Клиентский веб-сайт", ")
+System_Boundary(conference_site, "Сайт заказа услуг") {
    Container(client_service, "Сервис авторизации", "C++", "Сервис управления пользователями", $tags = "microService")    
-   Container(post_service, "Сервис постов", "C++", "Сервис управления блогами", $tags = "microService") 
-   Container(blog_service, "Сервис блогов", "C++", "Сервис управления постами", $tags = "microService")   
-   ContainerDb(db, "База данных", "MySQL", "Хранение данных о блогах, постах и пользователях", $tags = "storage")
+   Container(post_service, "Сервис услуг", "C++", "Сервис управления услугами", $tags = "microService") 
+   Container(blog_service, "Сервис заказов", "C++", "Сервис управления заказами", $tags = "microService")   
+   ContainerDb(db, "База данных", "MySQL", "Хранение данных об услугах, заказах и пользователях", $tags = "storage")
    
 }
 
-Rel(admin, web_site, "Просмотр, добавление и редактирование информации о пользователях, конференциях и докладах")
+Rel(admin, web_site, "Просмотр, добавление и редактирование информации о пользователях, услугах и заказах")
 Rel(moderator, web_site, "Модерация контента и пользователей")
-Rel(user, web_site, "Регистрация, просмотр информации о конференциях и докладах и запись на них")
+Rel(user, web_site, "Регистрация, просмотр информации об услугах, создание заказов")
 
 Rel(web_site, client_service, "Работа с пользователями", "localhost/person")
-Rel(client_service, db, "INSERT/SELECT/UPDATE", "SQL")
+Rel(client_service, db, "INSERT/SELECT/UPDATE/DELETE", "SQL")
 
-Rel(web_site, post_service, "Работа с постами", "localhost/pres")
-Rel(post_service, db, "INSERT/SELECT/UPDATE", "SQL")
+Rel(web_site, post_service, "Работа с услугами", "localhost/service")
+Rel(post_service, db, "INSERT/SELECT/UPDATE/DELETE", "SQL")
 
-Rel(web_site, blog_service, "Работа с блогами", "localhost/conf")
-Rel(blog_service, db, "INSERT/SELECT/UPDATE", "SQL")
+Rel(web_site, blog_service, "Работа с заказами", "localhost/order")
+Rel(blog_service, db, "INSERT/SELECT/UPDATE/DELETE", "SQL")
 
 @enduml
 ```
@@ -82,6 +81,7 @@ class Order {
   id
   date
   user_id
+  service_ids
 }
 
 class User {
@@ -93,15 +93,16 @@ class User {
   title
 }
 
-class Topic {
+class Service {
   id
   title
-  author_id
-  blog_id
-  body
-  change_date
+  category
+  info
+  price
 }
 
+User <- Order
+Order "1" --> "0..*" Service : Contains
 
 @enduml
 ```
