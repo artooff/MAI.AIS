@@ -1,0 +1,8 @@
+ссылка:https://github.com/artooff/MAI.AIS/tree/main/ServiceOrders
+
+стек:
+.net 6.0
+Asp.Net Core
+Entity Framework 6
+MariaDb
+
