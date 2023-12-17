@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "RSitcTOYIHEEvLV35h7/EKCpLMVydFwmlm18778YHbI=",
+  "Source": "ServiceOrders.UsersService",
+  "BasePath": "_content/ServiceOrders.UsersService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

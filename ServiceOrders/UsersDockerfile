@@ -1,0 +1,21 @@
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+WORKDIR /app
+EXPOSE 5001
+
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+WORKDIR /src
+COPY ["ServiceOrders.UsersService/ServiceOrders.UsersService.csproj", "ServiceOrders.UsersService/"]
+COPY ["ServiceOrders.Repository/ServiceOrders.Repository.csproj", "ServiceOrders.Repository/"]
+COPY ["ServiceOrders.Models/ServiceOrders.Models.csproj", "ServiceOrders.Models/"]
+RUN dotnet restore "ServiceOrders.UsersService/ServiceOrders.UsersService.csproj"
+COPY . .
+WORKDIR "/src/ServiceOrders.UsersService"
+RUN dotnet build "ServiceOrders.UsersService.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "ServiceOrders.UsersService.csproj" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "ServiceOrders.UsersService.dll"]

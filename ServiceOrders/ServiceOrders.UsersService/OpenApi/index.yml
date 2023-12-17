@@ -1,0 +1,123 @@
+﻿openapi: 3.0.0
+info:
+  title: Users Service API
+  version: 1.0.0
+paths:
+  /api/users/{login}:
+    get:
+      summary: Get user by login
+      parameters:
+        - name: login
+          in: path
+          required: true
+          description: The login of the user
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+        '404':
+          description: User not found
+  /api/users/search:
+    get:
+      summary: Search users by name and last name
+      parameters:
+        - name: firstName
+          in: query
+          description: The first name of the user
+          schema:
+            type: string
+        - name: lastName
+          in: query
+          description: The last name of the user
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+        '404':
+          description: Users not found
+  /api/users:
+    post:
+      summary: Create a new user
+      requestBody:
+        description: User data for creation
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateUserRequest'
+      responses:
+        '200':
+          description: User created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserIdResponse'
+        '400':
+          description: Bad request, invalid data provided
+components:
+  schemas:
+    UserResponse:
+      type: object
+      properties:
+        Id:
+          type: integer
+          format: int64
+          description: The unique identifier of the user.
+        Login:
+          type: string
+          description: The login of the user.
+        FirstName:
+          type: string
+          description: The first name of the user.
+        LastName:
+          type: string
+          description: The last name of the user.
+        Email:
+          type: string
+          format: email
+          description: The email address of the user.
+        Treatment:
+          type: string
+          description: The treatment of the user (e.g., "Mr" or "Mrs").
+    CreateUserRequest:
+      type: object
+      properties:
+        Login:
+          type: string
+          description: The login of the user.
+        Password:
+          type: string
+          description: The password of the user.
+        FirstName:
+          type: string
+          description: The first name of the user.
+        LastName:
+          type: string
+          description: The last name of the user.
+        Email:
+          type: string
+          format: email
+          description: The email address of the user.
+        Treatment:
+          type: string
+          enum:
+            - Mr
+            - Mrs
+          description: The treatment of the user (either "Mr" or "Mrs").
+    UserIdResponse:
+      type: object
+      properties:
+        UserId:
+          type: integer
+          format: int64
+          description: The unique identifier of the created user.

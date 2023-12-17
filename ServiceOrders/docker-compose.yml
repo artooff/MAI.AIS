@@ -1,0 +1,80 @@
+version: '3.0'
+
+networks:
+ dev:
+  driver: bridge
+
+services:
+  users-service: 
+   image: docker.io/library/users-service
+   depends_on:
+    - "services-db"
+   container_name: users-service
+   ports:
+    - "5001:5001"
+   build:
+    context: .
+    dockerfile: UsersDockerfile
+   environment:
+    - ConnectionStrings__DefaultConnection=Server=services_db;Port=3306;Database=ServiceOrdersDb;User=mariadb;Password=mariadb;
+    - ASPNETCORE_URLS=http://+:5001
+   networks:
+    - dev
+
+  services-service: 
+   image: docker.io/library/services-service
+   depends_on:
+    - "services-db"
+   container_name: services-service
+   ports:
+    - "5002:5002"
+   build:
+    context: .
+    dockerfile: ServicesDockerfile
+   environment:
+    - ConnectionStrings__DefaultConnection=Server=services_db;Port=3306;Database=ServiceOrdersDb;User=mariadb;Password=mariadb;
+    - ASPNETCORE_URLS=http://+:5002
+   networks:
+    - dev
+
+  orders-service: 
+   image: docker.io/library/orders-service
+   depends_on:
+    - "services-db"
+    - "users-service"
+    - "services-service"
+   container_name: orders-service
+   ports:
+    - "5003:5003"
+   build:
+    context: .
+    dockerfile: OrdersDockerfile
+   environment:
+    - ConnectionStrings__DefaultConnection=Server=services_db;Port=3306;Database=ServiceOrdersDb;User=mariadb;Password=mariadb;
+    - ASPNETCORE_URLS=http://+:5003
+    - USERS_API_BASE_URL=http://users-service:5001
+    - SERVICES_API_BASE_URL=http://services-service:5002
+   networks:
+    - dev
+   
+  services-db:
+   image: mariadb:latest
+   container_name: services_db
+   environment:
+      MYSQL_ROOT_PASSWORD: 1111
+      MYSQL_DATABASE: ServiceOrdersDb
+      MYSQL_USER: mariadb
+      MYSQL_PASSWORD: mariadb
+   networks:
+    - dev
+   volumes:
+      - appdata:/var/lib/mariadb/data
+      - ./init-db:/docker-entrypoint-initdb.d
+   healthcheck:
+    test: ["CMD-SHELL", "mysql -u root -p'1111' -e 'SHOW DATABASES;' | grep ServiceOrdersDb"]
+    timeout: 5s
+    retries: 3
+    interval: 10s
+
+volumes:
+ appdata:

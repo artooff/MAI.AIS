@@ -1,0 +1,15 @@
+C:\учеба\мага\АИС\MAI.AIS\ServiceOrders\ServiceOrders.Repository\bin\Debug\net6.0\ServiceOrders.Repository.deps.json
+C:\учеба\мага\АИС\MAI.AIS\ServiceOrders\ServiceOrders.Repository\bin\Debug\net6.0\ServiceOrders.Repository.dll
+C:\учеба\мага\АИС\MAI.AIS\ServiceOrders\ServiceOrders.Repository\bin\Debug\net6.0\ref\ServiceOrders.Repository.dll
+C:\учеба\мага\АИС\MAI.AIS\ServiceOrders\ServiceOrders.Repository\bin\Debug\net6.0\ServiceOrders.Repository.pdb
+C:\учеба\мага\АИС\MAI.AIS\ServiceOrders\ServiceOrders.Repository\bin\Debug\net6.0\ServiceOrders.Models.dll
+C:\учеба\мага\АИС\MAI.AIS\ServiceOrders\ServiceOrders.Repository\bin\Debug\net6.0\ServiceOrders.Models.pdb
+C:\учеба\мага\АИС\MAI.AIS\ServiceOrders\ServiceOrders.Repository\obj\Debug\net6.0\ServiceOrders.Repository.csproj.AssemblyReference.cache
+C:\учеба\мага\АИС\MAI.AIS\ServiceOrders\ServiceOrders.Repository\obj\Debug\net6.0\ServiceOrders.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\учеба\мага\АИС\MAI.AIS\ServiceOrders\ServiceOrders.Repository\obj\Debug\net6.0\ServiceOrders.Repository.AssemblyInfoInputs.cache
+C:\учеба\мага\АИС\MAI.AIS\ServiceOrders\ServiceOrders.Repository\obj\Debug\net6.0\ServiceOrders.Repository.AssemblyInfo.cs
+C:\учеба\мага\АИС\MAI.AIS\ServiceOrders\ServiceOrders.Repository\obj\Debug\net6.0\ServiceOrders.Repository.csproj.CoreCompileInputs.cache
+C:\учеба\мага\АИС\MAI.AIS\ServiceOrders\ServiceOrders.Repository\obj\Debug\net6.0\ServiceOrders.Repository.csproj.CopyComplete
+C:\учеба\мага\АИС\MAI.AIS\ServiceOrders\ServiceOrders.Repository\obj\Debug\net6.0\ServiceOrders.Repository.dll
+C:\учеба\мага\АИС\MAI.AIS\ServiceOrders\ServiceOrders.Repository\obj\Debug\net6.0\ref\ServiceOrders.Repository.dll
+C:\учеба\мага\АИС\MAI.AIS\ServiceOrders\ServiceOrders.Repository\obj\Debug\net6.0\ServiceOrders.Repository.pdb

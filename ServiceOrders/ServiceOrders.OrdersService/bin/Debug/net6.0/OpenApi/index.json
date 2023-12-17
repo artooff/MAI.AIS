@@ -1,0 +1,141 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Orders Service API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/orders/create": {
+      "post": {
+        "summary": "Add service to order",
+        "requestBody": {
+          "description": "Data for adding service to order",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddServiceToOrderRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Service added to order successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "The unique identifier of the order."
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, invalid data provided"
+          }
+        }
+      }
+    },
+    "/api/orders/{login}": {
+      "get": {
+        "summary": "Get order for user",
+        "parameters": [
+          {
+            "name": "login",
+            "in": "path",
+            "required": true,
+            "description": "The login of the user",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderWithServicesResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Order not found"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AddServiceToOrderRequest": {
+        "type": "object",
+        "properties": {
+          "UserId": {
+            "type": "integer",
+            "format": "int32",
+            "description": "The unique identifier of the user."
+          },
+          "ServiceId": {
+            "type": "integer",
+            "format": "int32",
+            "description": "The unique identifier of the service."
+          },
+          "OrderDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date of the order."
+          }
+        }
+      },
+      "OrderWithServicesResponse": {
+        "type": "object",
+        "properties": {
+          "OrderId": {
+            "type": "integer",
+            "format": "int32",
+            "description": "The unique identifier of the order."
+          },
+          "UserLogin": {
+            "type": "string",
+            "description": "The login of the user."
+          },
+          "OrderDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date of the order."
+          },
+          "Services": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServiceInOrderResponse"
+            }
+          }
+        }
+      },
+      "ServiceInOrderResponse": {
+        "type": "object",
+        "properties": {
+          "ServiceId": {
+            "type": "integer",
+            "format": "int32",
+            "description": "The unique identifier of the service."
+          },
+          "ServiceName": {
+            "type": "string",
+            "description": "The name of the service."
+          },
+          "ServicePrice": {
+            "type": "number",
+            "format": "decimal",
+            "description": "The price of the service."
+          }
+        }
+      }
+    }
+  }
+}

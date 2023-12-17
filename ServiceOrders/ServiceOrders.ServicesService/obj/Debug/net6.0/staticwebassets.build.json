@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "PgX+y3Kee6FZvU7v/0k/sftlJaTzw9UN8kjTecdV9vw=",
+  "Source": "ServiceOrders.ServicesService",
+  "BasePath": "_content/ServiceOrders.ServicesService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

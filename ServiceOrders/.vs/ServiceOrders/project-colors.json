@@ -1,0 +1,46 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "c6a7a105-dee6-4335-ac57-e1f7b47d1c61": {
+      "ProjectGuid": "c6a7a105-dee6-4335-ac57-e1f7b47d1c61",
+      "DisplayName": "ServiceOrders",
+      "ColorIndex": 0
+    },
+    "ca28167f-01c5-4a28-ae45-fe593ced6301": {
+      "ProjectGuid": "ca28167f-01c5-4a28-ae45-fe593ced6301",
+      "DisplayName": "ServiceOrders.Models",
+      "ColorIndex": 1
+    },
+    "84da4885-b31c-44b1-acff-d2fc901753d1": {
+      "ProjectGuid": "84da4885-b31c-44b1-acff-d2fc901753d1",
+      "DisplayName": "UsersService",
+      "ColorIndex": 2
+    },
+    "c12ced08-96d5-4ff1-80b5-3295a75a3900": {
+      "ProjectGuid": "c12ced08-96d5-4ff1-80b5-3295a75a3900",
+      "DisplayName": "ServiceOrders.UsersService",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Прочие файлы",
+      "ColorIndex": -1
+    },
+    "c25b20f8-d166-465c-a11c-567d2e964a34": {
+      "ProjectGuid": "c25b20f8-d166-465c-a11c-567d2e964a34",
+      "DisplayName": "ServiceOrders.Repository",
+      "ColorIndex": 4
+    },
+    "a15331e3-4070-4695-9443-3ceccf5a760a": {
+      "ProjectGuid": "a15331e3-4070-4695-9443-3ceccf5a760a",
+      "DisplayName": "ServiceOrders.ServicesService",
+      "ColorIndex": 5
+    },
+    "b97afe60-78ff-4b84-906c-3d7ef9e73b6e": {
+      "ProjectGuid": "b97afe60-78ff-4b84-906c-3d7ef9e73b6e",
+      "DisplayName": "ServiceOrders.OrdersService",
+      "ColorIndex": 6
+    }
+  },
+  "NextColorIndex": 7
+}

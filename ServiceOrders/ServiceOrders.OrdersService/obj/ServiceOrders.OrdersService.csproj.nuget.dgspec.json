@@ -1,0 +1,204 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\учеба\\мага\\АИС\\MAI.AIS\\ServiceOrders\\ServiceOrders.OrdersService\\ServiceOrders.OrdersService.csproj": {}
+  },
+  "projects": {
+    "C:\\учеба\\мага\\АИС\\MAI.AIS\\ServiceOrders\\ServiceOrders.Models\\ServiceOrders.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\учеба\\мага\\АИС\\MAI.AIS\\ServiceOrders\\ServiceOrders.Models\\ServiceOrders.Models.csproj",
+        "projectName": "ServiceOrders.Models",
+        "projectPath": "C:\\учеба\\мага\\АИС\\MAI.AIS\\ServiceOrders\\ServiceOrders.Models\\ServiceOrders.Models.csproj",
+        "packagesPath": "C:\\Users\\Andrey\\.nuget\\packages\\",
+        "outputPath": "C:\\учеба\\мага\\АИС\\MAI.AIS\\ServiceOrders\\ServiceOrders.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Andrey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\учеба\\мага\\АИС\\MAI.AIS\\ServiceOrders\\ServiceOrders.OrdersService\\ServiceOrders.OrdersService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\учеба\\мага\\АИС\\MAI.AIS\\ServiceOrders\\ServiceOrders.OrdersService\\ServiceOrders.OrdersService.csproj",
+        "projectName": "ServiceOrders.OrdersService",
+        "projectPath": "C:\\учеба\\мага\\АИС\\MAI.AIS\\ServiceOrders\\ServiceOrders.OrdersService\\ServiceOrders.OrdersService.csproj",
+        "packagesPath": "C:\\Users\\Andrey\\.nuget\\packages\\",
+        "outputPath": "C:\\учеба\\мага\\АИС\\MAI.AIS\\ServiceOrders\\ServiceOrders.OrdersService\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Andrey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\учеба\\мага\\АИС\\MAI.AIS\\ServiceOrders\\ServiceOrders.Models\\ServiceOrders.Models.csproj": {
+                "projectPath": "C:\\учеба\\мага\\АИС\\MAI.AIS\\ServiceOrders\\ServiceOrders.Models\\ServiceOrders.Models.csproj"
+              },
+              "C:\\учеба\\мага\\АИС\\MAI.AIS\\ServiceOrders\\ServiceOrders.Repository\\ServiceOrders.Repository.csproj": {
+                "projectPath": "C:\\учеба\\мага\\АИС\\MAI.AIS\\ServiceOrders\\ServiceOrders.Repository\\ServiceOrders.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.14.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\учеба\\мага\\АИС\\MAI.AIS\\ServiceOrders\\ServiceOrders.Repository\\ServiceOrders.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\учеба\\мага\\АИС\\MAI.AIS\\ServiceOrders\\ServiceOrders.Repository\\ServiceOrders.Repository.csproj",
+        "projectName": "ServiceOrders.Repository",
+        "projectPath": "C:\\учеба\\мага\\АИС\\MAI.AIS\\ServiceOrders\\ServiceOrders.Repository\\ServiceOrders.Repository.csproj",
+        "packagesPath": "C:\\Users\\Andrey\\.nuget\\packages\\",
+        "outputPath": "C:\\учеба\\мага\\АИС\\MAI.AIS\\ServiceOrders\\ServiceOrders.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Andrey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\учеба\\мага\\АИС\\MAI.AIS\\ServiceOrders\\ServiceOrders.Models\\ServiceOrders.Models.csproj": {
+                "projectPath": "C:\\учеба\\мага\\АИС\\MAI.AIS\\ServiceOrders\\ServiceOrders.Models\\ServiceOrders.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

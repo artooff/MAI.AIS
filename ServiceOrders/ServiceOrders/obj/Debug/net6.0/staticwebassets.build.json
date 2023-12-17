@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "bnFW4aNE6USLBRWqrmmqd2umY1I7KrZdcouraQZ6R8s=",
+  "Source": "ServiceOrders",
+  "BasePath": "_content/ServiceOrders",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
